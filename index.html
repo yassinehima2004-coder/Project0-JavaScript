@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body >
+    <!-- Banner -->
+    <div class="banner bg-red-700 text-white font-bold text-center relative p-2" id="banner">
+        <a href="#">Bienvenue ! Offres Spéciales -50% </a>
+        <button class="absolute top-[0] right-[15px] py-2" id="closeBanner"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <!--NavBar mobil-->
+    <div class="flex justify-between p-4 shadow-xl">
+        <h1 class="text-5xl">LOGO</h1>
+        <div>
+            <div id="myButton" class="burger-btn cursor-pointer p-4">
+                <div class="line1 w-[30px] h-[3px] bg-[#333] my-[6px] transition-all duration-300 ease-initial"></div>
+                <div class="line2 w-[30px] h-[3px] bg-[#333] my-[6px] transition-all duration-300 ease-initial"></div>
+                <div class="line3 w-[30px] h-[3px] bg-[#333] my-[6px] transition-all duration-300 ease-initial"></div>
+            </div>
+            <!-- Navigation Menu -->
+            <nav id="myMenu" class="menu hidden absolute top-0 left-0 w-[250px] h-[100vh] bg-white shadow-xl pt-[70px] text-center leading-[2] text-xl">
+                <ul class="">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Philosophy</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
