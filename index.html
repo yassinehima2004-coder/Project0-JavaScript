@@ -13,11 +13,13 @@
         <a href="#">Bienvenue ! Offres Spéciales -50% </a>
         <button class="absolute top-[0] right-[15px] py-2" id="closeBanner"><i class="fa-solid fa-xmark"></i></button>
     </div>
-    <!--NavBar mobil-->
-    <div class="flex justify-between p-4 shadow-xl">
+    <!--NavBar-->
+    <div class="flex justify-between items-center p-4 px-8 shadow-lg">
         <h1 class="text-5xl">LOGO</h1>
-        <div>
-            <div id="myButton" class="burger-btn cursor-pointer p-4">
+        <!--Mobil-->
+        <div class="md:hidden">
+            <!--button mobil-->
+            <div id="myButton" class="burger-btn cursor-pointer p-4 ">
                 <div class="line1 w-[30px] h-[3px] bg-[#333] my-[6px] transition-all duration-300 ease-initial"></div>
                 <div class="line2 w-[30px] h-[3px] bg-[#333] my-[6px] transition-all duration-300 ease-initial"></div>
                 <div class="line3 w-[30px] h-[3px] bg-[#333] my-[6px] transition-all duration-300 ease-initial"></div>
@@ -26,12 +28,34 @@
             <nav id="myMenu" class="menu hidden absolute top-0 left-0 w-[250px] h-[100vh] bg-white shadow-xl pt-[70px] text-center leading-[2] text-xl">
                 <ul class="">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Philosophy</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="dropdown">
+                    <button class="dropdown-btn" onclick="toggleDropdown2()">Products ▼</button>
+                    <ul id="mydropdown2" class="dropdown-content hidden text-center text-lg ">
+                        <li class="p-2 hover:bg-green-700"><a href="#" >Categories 1</a></li>
+                        <li class="p-2 hover:bg-green-700"><a href="#">Categories 2</a></li>
+                        <li class="p-2 hover:bg-green-700"><a href="#">Categories 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacts</a></li>
                 </ul>
             </nav>
         </div>
+        <!--Desktop-->
+        <div class="max-md:hidden">
+            <ul class="flex gap-[3vw] text-lg ">
+                <li><a href="#">Home</a></li>
+                <li class="dropdown relative">
+                    <button class="dropdown-btn" onclick="toggleDropdown()">Products ▼</button>
+                    <ul id="mydropdown" class="dropdown-content hidden absolute top-[120%] left-0 bg-green-500 rounded-lg text-white  w-[150px] text-center text-lg ">
+                        <li class="p-2 hover:bg-green-700"><a href="#" >Categories 1</a></li>
+                        <li class="p-2 hover:bg-green-700"><a href="#">Categories 2</a></li>
+                        <li class="p-2 hover:bg-green-700"><a href="#">Categories 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </div>
+
     </div>
 
     <script src="./script.js"></script>
